@@ -1,0 +1,37 @@
+@import "tailwindcss";
+@import "@fontsource/bodoni-moda/500.css";
+@import "@fontsource/bodoni-moda/600.css";
+@import "@fontsource/bodoni-moda/400-italic.css";
+@import "@fontsource/manrope/400.css";
+@import "@fontsource/manrope/500.css";
+@import "@fontsource/manrope/600.css";
+@import "@fontsource/manrope/700.css";
+
+@theme {
+  --font-display: "Bodoni Moda", serif;
+  --font-body: "Manrope", sans-serif;
+
+  --color-espresso: #3D2408;
+  --color-espresso-light: #5A3812;
+  --color-bronze: #96692B;
+  --color-bronze-light: #B8863C;
+  --color-bronze-dark: #7A5622;
+  --color-cream: #F4EDE3;
+  --color-cream-dark: #E8DCC8;
+  --color-ink: #2A2118;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background-color: var(--color-cream);
+}
+
+::selection {
+  background-color: var(--color-bronze);
+  color: var(--color-cream);
+}
