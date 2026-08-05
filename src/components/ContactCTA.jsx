@@ -51,7 +51,7 @@ export default function ContactCTA() {
               </div>
               <div>
                 <p className="font-display text-espresso">WhatsApp</p>
-                <p className="font-body text-sm text-ink/60">(00) 00000-0000</p>
+                <p className="font-body text-sm text-ink/60">(81) 98584-0009</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
@@ -60,7 +60,7 @@ export default function ContactCTA() {
               </div>
               <div>
                 <p className="font-display text-espresso">E-mail</p>
-                <p className="font-body text-sm text-ink/60">contato@dmdigital.com.br</p>
+                <p className="font-body text-sm text-ink/60">dmirele@gmail.com</p>
               </div>
             </div>
           </div>
@@ -99,7 +99,7 @@ export default function ContactCTA() {
             <div>
               <label htmlFor="whatsapp" className="font-body text-sm text-ink/70 block mb-1.5">WhatsApp</label>
               <input id="whatsapp" name="whatsapp" value={form.whatsapp} onChange={onChange}
-                placeholder="(00) 00000-0000"
+                placeholder="(81) 98584-0009"
                 className="w-full font-body text-sm border border-espresso/15 rounded-md px-4 py-2.5 bg-white focus:outline-none focus:border-bronze" />
             </div>
           </div>

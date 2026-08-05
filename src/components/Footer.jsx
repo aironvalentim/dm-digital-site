@@ -25,8 +25,8 @@ export default function Footer() {
         <div>
           <h3 className="font-display text-espresso mb-4">Contato</h3>
           <ul className="font-body text-sm text-ink/65 flex flex-col gap-2.5 mb-5">
-            <li>contato@dmdigital.com.br</li>
-            <li>(00) 00000-0000</li>
+            <li>dmirele@gmail.com</li>
+            <li>(81) 98584-0009</li>
           </ul>
           <div className="flex gap-3">
             {[FaInstagram, FaFacebookF, FaLinkedinIn].map((Icon, i) => (

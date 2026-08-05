@@ -1,4 +1,4 @@
-export const WHATSAPP_NUMBER = "5500000000000"; // formato: 55 + DDD + número
+export const WHATSAPP_NUMBER = "5581985840009"; // formato: 55 + DDD + número
 export const WHATSAPP_MESSAGE = "Olá! Vim pelo site da DM Digital e gostaria de solicitar um orçamento.";
 export const whatsappLink = (customMsg) =>
   `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(customMsg || WHATSAPP_MESSAGE)}`;
