@@ -1,6 +1,12 @@
 import { FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import Logo from "./Logo";
 
+const socials = [
+  { Icon: FaInstagram, href: "https://www.instagram.com/dmirele?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==", label: "Instagram" },
+  { Icon: FaFacebookF, href: "#", label: "Facebook" },
+  { Icon: FaLinkedinIn, href: "#", label: "LinkedIn" },
+];
+
 export default function Footer() {
   return (
     <footer className="px-6 pt-16 pb-8 border-t border-espresso/10">
@@ -29,9 +35,8 @@ export default function Footer() {
             <li>(81) 98584-0009</li>
           </ul>
           <div className="flex gap-3">
-            {[FaInstagram, FaFacebookF, FaLinkedinIn].map((Icon, i) => (
-              <a key={i} href="#" aria-label="Rede social"
-                className="w-9 h-9 rounded-full border border-espresso/15 flex items-center justify-center text-espresso hover:bg-bronze hover:text-cream hover:border-bronze transition-colors">
+            {socials.map(({ Icon, href, label }) => (
+              <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className="w-9 h-9 rounded-full border border-espresso/15 flex items-center justify-center text-espresso hover:bg-bronze hover:text-cream hover:border-bronze transition-colors">
                 <Icon size={14} />
               </a>
             ))}
