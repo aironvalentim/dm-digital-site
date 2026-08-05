@@ -4,6 +4,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { whatsappLink } from "../data/content";
 
 const initialForm = { nome: "", email: "", empresa: "", whatsapp: "", mensagem: "" };
+const WEB3FORMS_ACCESS_KEY = "06c07e93-312f-4eac-8d71-745f13a85581";
 
 export default function ContactCTA() {
   const [form, setForm] = useState(initialForm);
@@ -20,10 +21,27 @@ export default function ContactCTA() {
     window.fbq?.("track", "SubmitForm");
 
     try {
-      // TODO: substituir pelo endpoint real (ex.: Supabase insert, ou serviço de e-mail).
-      await new Promise((res) => setTimeout(res, 700)); // placeholder
-      setStatus("sent");
-      setForm(initialForm);
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: "Novo pedido de orçamento - DM Digital",
+          from_name: "Site DM Digital",
+          nome: form.nome,
+          email: form.email,
+          empresa: form.empresa,
+          whatsapp: form.whatsapp,
+          mensagem: form.mensagem,
+        }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setStatus("sent");
+        setForm(initialForm);
+      } else {
+        setStatus("error");
+      }
     } catch (err) {
       setStatus("error");
     }
