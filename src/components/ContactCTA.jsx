@@ -15,15 +15,12 @@ export default function ContactCTA() {
     e.preventDefault();
     setStatus("sending");
 
-    // Dispara eventos de conversão (Google Ads / GA4 / Meta Pixel)
     window.dataLayer?.push({ event: "generate_lead", form_name: "orcamento" });
     window.fbq?.("track", "Lead");
     window.fbq?.("track", "SubmitForm");
 
     try {
       // TODO: substituir pelo endpoint real (ex.: Supabase insert, ou serviço de e-mail).
-      // Exemplo com Supabase:
-      // await supabase.from("leads").insert([form]);
       await new Promise((res) => setTimeout(res, 700)); // placeholder
       setStatus("sent");
       setForm(initialForm);
@@ -65,13 +62,7 @@ export default function ContactCTA() {
             </div>
           </div>
 
-          <a
-            href={whatsappLink()}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => window.dataLayer?.push({ event: "whatsapp_click", location: "contact_section" })}
-            className="inline-flex items-center justify-center gap-2 w-full sm:w-auto font-body font-semibold text-sm bg-[#25D366] text-white px-7 py-4 rounded-md hover:opacity-90 transition-opacity"
-          >
+          <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" onClick={() => window.dataLayer?.push({ event: "whatsapp_click", location: "contact_section" })} className="inline-flex items-center justify-center gap-2 w-full sm:w-auto font-body font-semibold text-sm bg-[#25D366] text-white px-7 py-4 rounded-md hover:opacity-90 transition-opacity">
             <FaWhatsapp size={20} /> Falar pelo WhatsApp agora
           </a>
         </div>
@@ -79,42 +70,28 @@ export default function ContactCTA() {
         <form onSubmit={onSubmit} className="bg-cream border border-espresso/10 rounded-xl p-6 sm:p-8 flex flex-col gap-5">
           <div>
             <label htmlFor="nome" className="font-body text-sm text-ink/70 block mb-1.5">Nome *</label>
-            <input id="nome" name="nome" required value={form.nome} onChange={onChange}
-              placeholder="Seu nome completo"
-              className="w-full font-body text-sm border border-espresso/15 rounded-md px-4 py-2.5 bg-white focus:outline-none focus:border-bronze" />
+            <input id="nome" name="nome" required value={form.nome} onChange={onChange} placeholder="Seu nome completo" className="w-full font-body text-sm border border-espresso/15 rounded-md px-4 py-2.5 bg-white focus:outline-none focus:border-bronze" />
           </div>
           <div>
             <label htmlFor="email" className="font-body text-sm text-ink/70 block mb-1.5">E-mail *</label>
-            <input id="email" name="email" type="email" required value={form.email} onChange={onChange}
-              placeholder="seu@email.com"
-              className="w-full font-body text-sm border border-espresso/15 rounded-md px-4 py-2.5 bg-white focus:outline-none focus:border-bronze" />
+            <input id="email" name="email" type="email" required value={form.email} onChange={onChange} placeholder="seu@email.com" className="w-full font-body text-sm border border-espresso/15 rounded-md px-4 py-2.5 bg-white focus:outline-none focus:border-bronze" />
           </div>
           <div className="grid sm:grid-cols-2 gap-5">
             <div>
               <label htmlFor="empresa" className="font-body text-sm text-ink/70 block mb-1.5">Empresa</label>
-              <input id="empresa" name="empresa" value={form.empresa} onChange={onChange}
-                placeholder="Nome do seu negócio"
-                className="w-full font-body text-sm border border-espresso/15 rounded-md px-4 py-2.5 bg-white focus:outline-none focus:border-bronze" />
+              <input id="empresa" name="empresa" value={form.empresa} onChange={onChange} placeholder="Nome do seu negócio" className="w-full font-body text-sm border border-espresso/15 rounded-md px-4 py-2.5 bg-white focus:outline-none focus:border-bronze" />
             </div>
             <div>
               <label htmlFor="whatsapp" className="font-body text-sm text-ink/70 block mb-1.5">WhatsApp</label>
-              <input id="whatsapp" name="whatsapp" value={form.whatsapp} onChange={onChange}
-                placeholder="(81) 98584-0009"
-                className="w-full font-body text-sm border border-espresso/15 rounded-md px-4 py-2.5 bg-white focus:outline-none focus:border-bronze" />
+              <input id="whatsapp" name="whatsapp" value={form.whatsapp} onChange={onChange} placeholder="(00) 00000-0000" className="w-full font-body text-sm border border-espresso/15 rounded-md px-4 py-2.5 bg-white focus:outline-none focus:border-bronze" />
             </div>
           </div>
           <div>
             <label htmlFor="mensagem" className="font-body text-sm text-ink/70 block mb-1.5">Mensagem</label>
-            <textarea id="mensagem" name="mensagem" rows={4} value={form.mensagem} onChange={onChange}
-              placeholder="Como podemos te ajudar?"
-              className="w-full font-body text-sm border border-espresso/15 rounded-md px-4 py-2.5 bg-white focus:outline-none focus:border-bronze resize-none" />
+            <textarea id="mensagem" name="mensagem" rows={4} value={form.mensagem} onChange={onChange} placeholder="Como podemos te ajudar?" className="w-full font-body text-sm border border-espresso/15 rounded-md px-4 py-2.5 bg-white focus:outline-none focus:border-bronze resize-none" />
           </div>
 
-          <button
-            type="submit"
-            disabled={status === "sending"}
-            className="font-body font-semibold text-sm bg-espresso text-cream px-7 py-4 rounded-md hover:bg-bronze transition-colors disabled:opacity-60"
-          >
+          <button type="submit" disabled={status === "sending"} className="font-body font-semibold text-sm bg-espresso text-cream px-7 py-4 rounded-md hover:bg-bronze transition-colors disabled:opacity-60">
             {status === "sending" ? "Enviando..." : "Solicitar orçamento"}
           </button>
 
