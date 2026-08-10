@@ -16,15 +16,8 @@ export default function About() {
             Parceiros estratégicos do seu negócio
           </h2>
           <div className="w-14 h-[2px] bg-bronze mb-6" />
-          <p className="font-body text-ink/70 leading-relaxed mb-4">
-            A DM Digital nasceu com um propósito claro: entregar resultados de
-            verdade. Somos mais do que uma agência — somos parceiros
-            estratégicos do seu negócio.
-          </p>
           <p className="font-body text-ink/70 leading-relaxed">
-            Através de metodologias validadas e uma visão 360° de marketing,
-            ajudamos pequenas e médias empresas a conquistar mais
-            visibilidade, autoridade e, acima de tudo, clientes reais.
+            Através de metodologias validadas e uma visão 360° de marketing, ajudamos pequenas e médias empresas a conquistar mais visibilidade, autoridade e, acima de tudo, clientes reais.
           </p>
         </div>
 

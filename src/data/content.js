@@ -1,4 +1,4 @@
-export const WHATSAPP_NUMBER = "5581985840009"; // formato: 55 + DDD + número
+export const WHATSAPP_NUMBER = "5581985840009";
 export const WHATSAPP_MESSAGE = "Olá! Vim pelo site da DM Digital e gostaria de solicitar um orçamento.";
 export const whatsappLink = (customMsg) =>
   `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(customMsg || WHATSAPP_MESSAGE)}`;
@@ -12,7 +12,7 @@ export const services = [
   {
     icon: "trending-up",
     title: "Tráfego Pago",
-    desc: "Google Ads, Meta Ads, remarketing e campanhas de conversão para atrair clientes qualificados diretamente para o seu negócio.",
+    desc: "Google Ads, Meta Ads, Google Meu Negócio, TikTok Ads, campanhas de conversão para atrair clientes qualificados diretamente para seu negócio.",
   },
   {
     icon: "monitor",
