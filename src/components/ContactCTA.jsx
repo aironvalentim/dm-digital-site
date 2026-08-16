@@ -8,7 +8,7 @@ const WEB3FORMS_ACCESS_KEY = "06c07e93-312f-4eac-8d71-745f13a85581";
 
 export default function ContactCTA() {
   const [form, setForm] = useState(initialForm);
-  const [status, setStatus] = useState("idle"); // idle | sending | sent | error
+  const [status, setStatus] = useState("idle");
 
   const onChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
@@ -66,7 +66,7 @@ export default function ContactCTA() {
               </div>
               <div>
                 <p className="font-display text-espresso">WhatsApp</p>
-                <p className="font-body text-sm text-ink/60">(81) 98584-0009</p>
+                <p className="font-body text-sm text-ink/60">(81) 98504-0009</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
@@ -75,7 +75,7 @@ export default function ContactCTA() {
               </div>
               <div>
                 <p className="font-display text-espresso">E-mail</p>
-                <p className="font-body text-sm text-ink/60">dmirele@gmail.com</p>
+                <p className="font-body text-sm text-ink/60">dmdigital.trafegopago@gmail.com</p>
               </div>
             </div>
           </div>
