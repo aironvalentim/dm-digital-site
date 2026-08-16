@@ -28,7 +28,7 @@ export const services = [
 
 export const differentials = [
   { title: "Atendimento personalizado", desc: "Cada cliente tem um plano pensado para o seu momento de negócio." },
-  { title: "Estratégias sob medida", desc: "Nada de fórmula pronta — cada ação nasce de um diagnóstico real." },
+  { title: "Estratégias sob medida", desc: "Nada de fórmula pronta  cada ação nasce de um diagnóstico real." },
   { title: "Relatórios transparentes", desc: "Você acompanha exatamente onde seu investimento está gerando retorno." },
   { title: "Foco em resultados", desc: "Métricas que importam de verdade: vendas, leads e crescimento." },
   { title: "Suporte rápido", desc: "Resposta ágil sempre que você precisar ajustar o rumo da estratégia." },
