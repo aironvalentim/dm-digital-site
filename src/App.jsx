@@ -1,29 +1,29 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import Benefits from "./components/Benefits";
+import Modules from "./components/Modules";
 import About from "./components/About";
-import Services from "./components/Services";
 import Differentials from "./components/Differentials";
-import HowItWorks from "./components/HowItWorks";
 import FAQ from "./components/FAQ";
 import ContactCTA from "./components/ContactCTA";
 import Footer from "./components/Footer";
-import WhatsAppButton from "./components/WhatsAppButton";
+import FloatingElements from "./components/FloatingElements";
 
 export default function App() {
   return (
-    <div className="bg-cream text-ink min-h-screen">
+    <div className="bg-white text-text min-h-screen font-sans">
       <Navbar />
       <main>
         <Hero />
+        <Benefits />
+        <Modules />
         <About />
-        <Services />
         <Differentials />
-        <HowItWorks />
         <FAQ />
         <ContactCTA />
       </main>
       <Footer />
-      <WhatsAppButton />
+      <FloatingElements />
     </div>
   );
 }

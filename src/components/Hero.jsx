@@ -1,51 +1,57 @@
 import { FaWhatsapp } from "react-icons/fa";
-import { HiArrowRight } from "react-icons/hi";
-import { whatsappLink, stats } from "../data/content";
+import { whatsappLink } from "../data/content";
 
 export default function Hero() {
   return (
-    <section id="inicio" className="pt-36 pb-16 px-6">
-      <div className="max-w-6xl mx-auto">
-        <div className="max-w-2xl">
-          <p className="font-body uppercase tracking-[0.2em] text-xs text-bronze mb-5">
-            Marketing digital de resultado
-          </p>
-          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl leading-[1.1] text-espresso">
-            Transformamos sua empresa em uma{" "}
-            <span className="text-bronze italic">máquina de vendas.</span>
-          </h1>
-          <p className="font-body text-base sm:text-lg text-ink/70 mt-6 max-w-xl leading-relaxed">
-            A DM Digital ajuda empresas a vender mais através de estratégias
-            inteligentes de marketing digital. Resultados reais, mensuráveis
-            e escaláveis.
-          </p>
+    <section
+      id="inicio"
+      className="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden"
+      style={{
+        background:
+          "linear-gradient(135deg, #2C3E50 0%, #121212 55%, #0D0D0D 100%)",
+      }}
+    >
+      <div
+        className="absolute inset-0 opacity-30"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 20% 20%, #FF6600 0%, transparent 35%), radial-gradient(circle at 80% 70%, #2C3E50 0%, transparent 45%)",
+        }}
+      />
+      <div className="absolute inset-0 bg-black/40" />
 
-          <div className="flex flex-wrap gap-4 mt-9">
-            <a
-              href="#contato"
-              className="inline-flex items-center gap-2 font-body font-semibold text-sm bg-espresso text-cream px-7 py-4 rounded-md hover:bg-bronze transition-colors"
-            >
-              Solicitar orçamento <HiArrowRight />
-            </a>
-            <a
-              href={whatsappLink()}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => window.dataLayer?.push({ event: "whatsapp_click", location: "hero" })}
-              className="inline-flex items-center gap-2 font-body font-semibold text-sm border border-bronze text-espresso px-7 py-4 rounded-md hover:bg-bronze/10 transition-colors"
-            >
-              <FaWhatsapp size={18} /> Falar no WhatsApp
-            </a>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-3 gap-6 mt-20 pt-10 border-t border-espresso/10 max-w-2xl">
-          {stats.map((s) => (
-            <div key={s.label}>
-              <p className="font-display text-3xl sm:text-4xl text-espresso">{s.value}</p>
-              <p className="font-body text-xs sm:text-sm text-ink/60 mt-1">{s.label}</p>
-            </div>
-          ))}
+      <div className="relative z-10 max-w-3xl mx-auto px-6 text-center text-white">
+        <h1
+          className="font-sans font-extrabold text-4xl sm:text-5xl md:text-6xl leading-tight mb-6"
+          style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.7)" }}
+        >
+          Transformamos sua empresa em uma{" "}
+          <span className="text-primary">máquina de vendas.</span>
+        </h1>
+        <p
+          className="font-sans text-lg opacity-90 mb-10 max-w-xl mx-auto"
+          style={{ textShadow: "1px 1px 2px rgba(0,0,0,0.7)" }}
+        >
+          A DM Digital ajuda empresas a vender mais através de estratégias
+          inteligentes de marketing digital. Resultados reais, mensuráveis e
+          escaláveis.
+        </p>
+        <div className="flex flex-wrap gap-4 justify-center">
+          <a
+            href="#contato"
+            className="font-sans font-semibold text-sm bg-primary text-white px-8 py-4 rounded-lg hover:bg-primary-dark hover:-translate-y-0.5 transition-all shadow-lg"
+          >
+            Solicitar orçamento
+          </a>
+          <a
+            href={whatsappLink()}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => window.dataLayer?.push({ event: "whatsapp_click", location: "hero" })}
+            className="font-sans font-semibold text-sm border-2 border-primary text-primary bg-white/5 px-8 py-4 rounded-lg hover:bg-primary hover:text-white hover:-translate-y-0.5 transition-all inline-flex items-center gap-2"
+          >
+            <FaWhatsapp size={18} /> Falar no WhatsApp
+          </a>
         </div>
       </div>
     </section>

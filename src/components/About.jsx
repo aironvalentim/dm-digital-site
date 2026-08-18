@@ -1,37 +1,48 @@
 import { HiOutlineChartBar, HiOutlineUserGroup, HiOutlineCheckCircle } from "react-icons/hi";
+import { stats } from "../data/content";
+import Reveal from "./Reveal";
 
-const points = [
-  { icon: HiOutlineChartBar, title: "Resultados reais", desc: "Focamos em métricas que importam: vendas e crescimento." },
-  { icon: HiOutlineUserGroup, title: "Equipe especializada", desc: "Profissionais dedicados e atualizados nas melhores ferramentas do mercado." },
-  { icon: HiOutlineCheckCircle, title: "Atendimento humanizado", desc: "Proximidade e transparência em todas as etapas do projeto." },
+const highlights = [
+  { icon: HiOutlineChartBar, text: "Focamos em métricas que importam: vendas e crescimento." },
+  { icon: HiOutlineUserGroup, text: "Profissionais dedicados e atualizados nas melhores ferramentas do mercado." },
+  { icon: HiOutlineCheckCircle, text: "Proximidade e transparência em todas as etapas do projeto." },
 ];
 
 export default function About() {
   return (
-    <section id="quem-somos" className="py-20 px-6 bg-cream-dark/40">
-      <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-14 items-start">
-        <div>
-          <p className="font-body uppercase tracking-[0.2em] text-xs text-bronze mb-4">Quem somos</p>
-          <h2 className="font-display text-3xl sm:text-4xl text-espresso mb-6">
-            Parceiros estratégicos do seu negócio
-          </h2>
-          <div className="w-14 h-[2px] bg-bronze mb-6" />
-          <p className="font-body text-ink/70 leading-relaxed">
-            Através de metodologias validadas e uma visão 360° de marketing, ajudamos pequenas e médias empresas a conquistar mais visibilidade, autoridade e, acima de tudo, clientes reais.
-          </p>
-        </div>
+    <section id="sobre" className="py-20 px-6 bg-gray-bg">
+      <div className="max-w-6xl mx-auto grid lg:grid-cols-[1fr_2fr] gap-14 items-center">
+        <Reveal>
+          <div className="aspect-square rounded-2xl bg-gradient-to-br from-secondary to-dark flex items-center justify-center shadow-xl">
+            <span className="font-sans font-extrabold text-6xl text-primary">DM</span>
+          </div>
+        </Reveal>
 
-        <div className="flex flex-col gap-4">
-          {points.map((p) => (
-            <div key={p.title} className="bg-cream border border-espresso/10 rounded-xl p-6 flex gap-4">
-              <p.icon className="text-bronze shrink-0 mt-1" size={26} />
-              <div>
-                <h3 className="font-display text-lg text-espresso mb-1">{p.title}</h3>
-                <p className="font-body text-sm text-ink/65 leading-relaxed">{p.desc}</p>
+        <Reveal delay={100}>
+          <h2 className="font-sans font-bold text-3xl sm:text-4xl text-secondary mb-2">Quem somos</h2>
+          <div className="w-20 h-1 bg-primary mb-6" />
+          <p className="font-sans text-text-gray leading-relaxed mb-8">
+            Através de metodologias validadas e uma visão 360° de marketing,
+            ajudamos pequenas e médias empresas a conquistar mais visibilidade,
+            autoridade e, acima de tudo, clientes reais.
+          </p>
+          <div className="grid grid-cols-3 gap-6 mb-8">
+            {stats.map((s) => (
+              <div key={s.label}>
+                <p className="font-sans font-extrabold text-2xl sm:text-3xl text-primary">{s.value}</p>
+                <p className="font-sans text-xs text-text-gray mt-1">{s.label}</p>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+          <div className="flex flex-col gap-4">
+            {highlights.map((h) => (
+              <div key={h.text} className="flex items-center gap-3">
+                <h.icon className="text-primary shrink-0" size={22} />
+                <p className="font-sans text-sm text-text">{h.text}</p>
+              </div>
+            ))}
+          </div>
+        </Reveal>
       </div>
     </section>
   );

@@ -1,24 +1,21 @@
 @import "tailwindcss";
-@import "@fontsource/bodoni-moda/500.css";
-@import "@fontsource/bodoni-moda/600.css";
-@import "@fontsource/bodoni-moda/400-italic.css";
-@import "@fontsource/manrope/400.css";
-@import "@fontsource/manrope/500.css";
-@import "@fontsource/manrope/600.css";
-@import "@fontsource/manrope/700.css";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
 
 @theme {
-  --font-display: "Bodoni Moda", serif;
-  --font-body: "Manrope", sans-serif;
+  --font-sans: "Inter", "Segoe UI", sans-serif;
 
-  --color-espresso: #3D2408;
-  --color-espresso-light: #5A3812;
-  --color-bronze: #96692B;
-  --color-bronze-light: #B8863C;
-  --color-bronze-dark: #7A5622;
-  --color-cream: #F4EDE3;
-  --color-cream-dark: #E8DCC8;
-  --color-ink: #2A2118;
+  --color-primary: #FF6600;
+  --color-primary-dark: #E65C00;
+  --color-secondary: #2C3E50;
+  --color-dark: #121212;
+  --color-darker: #0D0D0D;
+  --color-light: #FFFFFF;
+  --color-gray-bg: #F5F5F5;
+  --color-text: #333333;
+  --color-text-gray: #777777;
 }
 
 html {
@@ -26,12 +23,31 @@ html {
 }
 
 body {
-  font-family: var(--font-body);
-  color: var(--color-ink);
-  background-color: var(--color-cream);
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background-color: var(--color-light);
 }
 
 ::selection {
-  background-color: var(--color-bronze);
-  color: var(--color-cream);
+  background-color: var(--color-primary);
+  color: white;
+}
+
+@keyframes pulse-whatsapp {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+  70% { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+.animate-pulse-whatsapp {
+  animation: pulse-whatsapp 2s infinite;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }

@@ -4,15 +4,15 @@ import { faqs } from "../data/content";
 
 function FaqItem({ faq, isOpen, onToggle }) {
   return (
-    <div className="border-b border-espresso/10">
+    <div className="border-b border-black/10">
       <button
         onClick={onToggle}
         className="w-full flex items-center justify-between text-left py-5 gap-4"
         aria-expanded={isOpen}
       >
-        <span className="font-display text-lg text-espresso">{faq.q}</span>
+        <span className="font-sans font-semibold text-lg text-secondary">{faq.q}</span>
         <HiChevronDown
-          className={`shrink-0 text-bronze transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+          className={`shrink-0 text-primary transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
           size={22}
         />
       </button>
@@ -21,7 +21,7 @@ function FaqItem({ faq, isOpen, onToggle }) {
         style={{ display: "grid" }}
       >
         <div className="overflow-hidden">
-          <p className="font-body text-sm text-ink/65 leading-relaxed max-w-2xl">{faq.a}</p>
+          <p className="font-sans text-sm text-text-gray leading-relaxed max-w-2xl">{faq.a}</p>
         </div>
       </div>
     </div>
@@ -34,7 +34,10 @@ export default function FAQ() {
   return (
     <section id="faq" className="py-20 px-6">
       <div className="max-w-3xl mx-auto">
-        <h2 className="font-display text-3xl sm:text-4xl text-espresso mb-10">Perguntas frequentes</h2>
+        <h2 className="font-sans font-bold text-3xl sm:text-4xl text-secondary text-center mb-2">
+          Perguntas frequentes
+        </h2>
+        <div className="w-20 h-1 bg-primary mx-auto mb-12" />
         <div>
           {faqs.map((faq, i) => (
             <FaqItem
