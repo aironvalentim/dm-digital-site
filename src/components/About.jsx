@@ -9,12 +9,14 @@ const highlights = [
 ];
 
 export default function About() {
+  const photo = `${import.meta.env.BASE_URL}images/sobre-deyne.jpeg`;
+
   return (
     <section id="sobre" className="py-20 px-6 bg-gray-bg">
       <div className="max-w-6xl mx-auto grid lg:grid-cols-[1fr_2fr] gap-14 items-center">
         <Reveal>
-          <div className="aspect-square rounded-2xl bg-gradient-to-br from-secondary to-dark flex items-center justify-center shadow-xl">
-            <span className="font-sans font-extrabold text-6xl text-primary">DM</span>
+          <div className="aspect-square rounded-2xl overflow-hidden shadow-xl">
+            <img src={photo} alt="Deyne - DM Digital" className="w-full h-full object-cover" />
           </div>
         </Reveal>
 
