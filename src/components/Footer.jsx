@@ -46,7 +46,7 @@ export default function Footer() {
 
       <div className="max-w-6xl mx-auto pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between gap-3">
         <p className="font-sans text-xs text-white/50">© {new Date().getFullYear()} DM Digital. Todos os direitos reservados.</p>
-        <a href="/politica-de-privacidade" className="font-sans text-xs text-white/50 hover:text-primary">Política de Privacidade</a>
+        <a href={`${import.meta.env.BASE_URL}politica-de-privacidade`} className="font-sans text-xs text-white/50 hover:text-primary">Política de Privacidade</a>
       </div>
     </footer>
   );
