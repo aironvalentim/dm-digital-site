@@ -2,11 +2,11 @@ import { FaWhatsapp } from "react-icons/fa";
 import { whatsappLink } from "../data/content";
 
 export default function Hero() {
-  const bg = `${import.meta.env.BASE_URL}images/hero-bg.jpeg`;
+  const bg = `${import.meta.env.BASE_URL}images/hero-bg.jpg`;
 
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden">
-      <div className="absolute inset-0 bg-cover" style={{ backgroundImage: `url(${bg})`, backgroundPosition: "68% 24%" }} />
+      <div className="absolute inset-0 bg-cover" style={{ backgroundImage: `url(${bg})`, backgroundPosition: "52% 20%" }} />
       <div className="absolute inset-0" style={{ background: "linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.4) 100%)" }} />
 
       <div className="relative z-10 max-w-3xl mx-auto px-6 text-center text-white">
