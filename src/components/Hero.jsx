@@ -2,7 +2,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { whatsappLink } from "../data/content";
 
 export default function Hero() {
-  const bg = `${import.meta.env.BASE_URL}images/hero-bg.jpg`;
+  const bg = `${import.meta.env.BASE_URL}images/hero-bg.jpeg`;
 
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden">
