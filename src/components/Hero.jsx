@@ -10,7 +10,7 @@ export default function Hero() {
       <div className="absolute inset-x-0 top-20 bottom-0" style={{ background: "linear-gradient(90deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.25) 100%)" }} />
       <div className="absolute inset-x-0 top-20 bottom-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.6) 38%, rgba(0,0,0,0) 68%)" }} />
 
-      <div className="relative z-10 min-h-screen flex flex-col justify-end pt-20 px-6" style={{ paddingBottom: "7vh" }}>
+      <div className="absolute inset-x-0 px-6" style={{ top: "64%", transform: "translateY(-50%)" }}>
         <div className="max-w-3xl mx-auto text-center text-white w-full">
           <h1 className="font-sans font-extrabold text-3xl sm:text-4xl md:text-5xl leading-tight mb-4" style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.7)" }}>
             Transformamos sua empresa em uma{" "}
