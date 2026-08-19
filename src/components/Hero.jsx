@@ -10,8 +10,9 @@ export default function Hero() {
       <div className="absolute inset-x-0 top-20 bottom-0" style={{ background: "linear-gradient(90deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.25) 100%)" }} />
       <div className="absolute inset-x-0 top-20 bottom-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.55) 32%, rgba(0,0,0,0) 62%)" }} />
 
-      <div className="relative z-10 min-h-screen flex items-end pt-20 pb-14 sm:pb-20 px-6">
-        <div className="max-w-3xl mx-auto text-center text-white w-full">
+      <div className="relative z-10 min-h-screen flex flex-col pt-20 px-6">
+        <div className="flex-[3]" />
+        <div className="flex-[2] flex flex-col justify-center items-center text-center text-white max-w-3xl mx-auto w-full pb-10 sm:pb-14">
           <h1 className="font-sans font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight mb-5" style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.7)" }}>
             Transformamos sua empresa em uma{" "}
             <span className="text-primary">máquina de vendas.</span>
