@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  base: '/dm-digital-site/',
+  base: '/',
   plugins: [react(), tailwindcss()],
 })
